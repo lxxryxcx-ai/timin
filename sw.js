@@ -27,7 +27,9 @@ self.addEventListener('fetch', e => {
   if (r.method !== 'GET') return;
   const url = new URL(r.url);
   if (url.origin !== location.origin) return;
-  if (r.mode === 'navigate') {
+  // главная страница — из кэша; другие страницы на том же адресе (разбор, предложение) идут в сеть как обычно:
+  // раньше на любой переход отдавалась главная, а чужая страница ещё и записывалась в кэш вместо неё
+  if (r.mode === 'navigate' && (url.href.split(/[?#]/)[0] === PAGE || url.pathname === new URL('index.html', PAGE).pathname)) {
     const fresh = fetch(r).then(res => {
       if (res.ok) caches.open(VERSION).then(c => c.put(PAGE, res.clone()));
       return res;
