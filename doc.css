@@ -105,3 +105,7 @@ figcaption{margin-top:12px;font-size:.84rem;color:var(--mute);line-height:1.5}
 }
 
 .nw{white-space:nowrap}
+
+/* подпись отправителя: то же имя, что в WhatsApp */
+.sign{margin-top:40px;font-size:.95rem;color:var(--mute)}
+.sign-name{font-family:var(--serif);font-size:1.3rem;color:var(--ink)}
