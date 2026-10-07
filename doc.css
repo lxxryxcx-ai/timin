@@ -1,9 +1,9 @@
-/* Разбор и предложение для студии: тот же лист, что у демо-сайта (Playfair + Jost, белый лист, тонкие линии),
+/* Лежит в корне сайта рядом с fonts/, поэтому пути шрифтов без «../». Разбор и предложение для студии: тот же лист, что у демо-сайта (Playfair + Jost, белый лист, тонкие линии),
    но одна колонка для чтения с телефона. Кнопки — пилюли с плавной сменой цвета за 0.4 с, скриншоты — прямые углы. */
-@font-face{font-family:'Jost';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/Jost-400.woff2) format('woff2')}
-@font-face{font-family:'Jost';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/Jost-500.woff2) format('woff2')}
-@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/Playfair-400.woff2) format('woff2')}
-@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;font-display:swap;src:url(../fonts/Playfair-italic-400.woff2) format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/Jost-400.woff2) format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/Jost-500.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/Playfair-400.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/Playfair-italic-400.woff2) format('woff2')}
 :root{
   --paper:#FCFCFB;--ink:#141414;--ink-2:#3D3D3B;--mute:#6C6C68;--rule:#E2E2DE;--rule-2:#C9C9C4;--wash:#F2F2EF;
   --serif:'Playfair Display','Didot','Bodoni 72',Georgia,serif;
