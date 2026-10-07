@@ -109,3 +109,57 @@ figcaption{margin-top:12px;font-size:.84rem;color:var(--mute);line-height:1.5}
 /* подпись отправителя: то же имя, что в WhatsApp */
 .sign{margin-top:40px;font-size:.95rem;color:var(--mute)}
 .sign-name{font-family:var(--serif);font-size:1.3rem;color:var(--ink)}
+
+/* КП: их сайт крупно — компьютер во всю ширину разворота, телефон в чёрной рамке поверх угла */
+.screens{position:relative;left:50%;transform:translateX(-50%);width:min(1080px,calc(100vw - 2 * var(--gutter)));margin:clamp(8px,2vw,24px) 0 0}
+.screens-link{display:block;position:relative;padding-bottom:9%}
+.screens .desk{display:block;width:100%;border:1px solid var(--rule)}
+.screens .phone{position:absolute;right:4%;bottom:0;width:23%;border:6px solid var(--ink);border-radius:28px;box-shadow:0 24px 60px rgba(20,20,20,.22);background:var(--ink)}
+.screens figcaption{max-width:var(--col);margin:16px auto 0}
+@media (max-width:560px){
+  .screens-link{padding-bottom:18%}
+  .screens .phone{width:36%;right:2%;border-width:4px;border-radius:18px}
+  .screens .desk{border-left:0;border-right:0}
+  .screens{width:100vw}
+  .screens figcaption{padding:0 var(--gutter)}
+}
+
+/* «Что изменится»: было → будет, две колонки на компьютере, парой строк на телефоне */
+.change-head{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:28px;padding-bottom:12px;border-bottom:1px solid var(--ink)}
+.change-head span:first-child{color:var(--mute)}
+.ch{display:grid;grid-template-columns:1fr 1fr;gap:8px 32px;padding:20px 0;border-bottom:1px solid var(--rule);align-items:start}
+.ch .was{color:var(--mute);text-wrap:pretty}
+.ch .now{color:var(--ink);text-wrap:pretty}
+@media (max-width:560px){
+  .change-head{display:none}
+  .ch{grid-template-columns:1fr}
+  .ch .was::before,.ch .now::before{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin-bottom:4px}
+  .ch .was::before{content:"Сейчас"}
+  .ch .now::before{content:"После запуска";color:var(--ink)}
+}
+
+/* абонентка: две колонки с крупной ценой, вертикальная линия между ними */
+.duo{display:grid;grid-template-columns:1fr 1fr;margin-top:28px;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
+.duo-i{padding:24px 28px 28px 0}
+.duo-i + .duo-i{padding:24px 0 28px 28px;border-left:1px solid var(--rule)}
+.duo h3{font-size:1.25rem;line-height:1.3}
+.big{font-family:var(--serif);font-size:clamp(2rem,1.6rem + 1.4vw,2.6rem);line-height:1.05;font-variant-numeric:lining-nums;color:var(--ink);margin:14px 0 12px}
+.big span{font-family:var(--sans);font-size:.95rem;color:var(--mute);letter-spacing:0}
+.duo-i p:last-child{color:var(--ink-2);text-wrap:pretty}
+@media (max-width:560px){
+  .duo{grid-template-columns:1fr}
+  .duo-i,.duo-i + .duo-i{padding:22px 0;border-left:0}
+  .duo-i + .duo-i{border-top:1px solid var(--rule)}
+}
+
+/* сроки: три шага с крупной цифрой */
+.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;border-top:1px solid var(--ink);padding-top:24px}
+.steps li{display:flex;flex-direction:column;gap:6px}
+.steps .big{display:block;margin:0 0 6px}
+.steps .what{font-weight:500}
+.steps .cond{color:var(--mute);font-size:.92rem;line-height:1.5;text-wrap:pretty}
+@media (max-width:560px){.steps{grid-template-columns:1fr;gap:22px}}
+
+/* последняя строка без нижней линии: её заменяет черта следующего раздела, двойных линий нет */
+.rows .row:last-child{border-bottom:0}
+.change .ch:last-child{border-bottom:0}
