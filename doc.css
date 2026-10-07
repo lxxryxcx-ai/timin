@@ -78,7 +78,7 @@ figcaption{margin-top:12px;font-size:.84rem;color:var(--mute);line-height:1.5}
 .plan{border:1px solid var(--rule-2);padding:clamp(24px,4vw,36px)}
 .plan--main{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .plan-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
-.plan h3{font-size:clamp(1.5rem,1.25rem + .9vw,1.95rem);line-height:1.15}
+.plan h2{font-size:clamp(1.5rem,1.25rem + .9vw,1.95rem);line-height:1.15}
 .badge{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;border:1px solid currentColor;border-radius:999px;padding:5px 12px 4px}
 .price{font-family:var(--serif);font-size:clamp(2rem,1.6rem + 1.6vw,2.7rem);line-height:1;margin-top:18px;font-variant-numeric:lining-nums}
 .plan ul{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
