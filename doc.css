@@ -163,3 +163,10 @@ figcaption{margin-top:12px;font-size:.84rem;color:var(--mute);line-height:1.5}
 /* последняя строка без нижней линии: её заменяет черта следующего раздела, двойных линий нет */
 .rows .row:last-child{border-bottom:0}
 .change .ch:last-child{border-bottom:0}
+
+/* строка «для кого» под ценой пакета */
+.plan-for{margin-top:10px;color:var(--mute);text-wrap:pretty}
+.plan--main .plan-for{color:#B9B9B4}
+
+/* длинные адреса вроде taplink.cc/httpsinstagram.comtimin_ma переносятся на узких экранах, а не растягивают страницу */
+body{overflow-wrap:break-word}
