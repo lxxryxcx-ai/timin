@@ -170,3 +170,13 @@ figcaption{margin-top:12px;font-size:.84rem;color:var(--mute);line-height:1.5}
 
 /* длинные адреса вроде taplink.cc/httpsinstagram.comtimin_ma переносятся на узких экранах, а не растягивают страницу */
 body{overflow-wrap:break-word}
+
+/* «Из чего собран сайт»: круглый логотип рядом с надписью на сайте */
+.made-pair{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(24px,5vw,56px);align-items:end;margin:28px 0 24px;padding:28px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.made-pair figure{margin:0;display:flex;flex-direction:column;justify-content:flex-end;gap:16px;height:100%}
+.made-pair picture{display:flex;flex:1;align-items:center}
+.made-logo{width:clamp(80px,14vw,120px)}
+.made-word{width:min(340px,100%)}
+.made-pair figcaption{margin:0;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--mute)}
+.made > p + p{margin-top:12px}
+
