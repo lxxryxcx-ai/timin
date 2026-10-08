@@ -180,3 +180,20 @@ body{overflow-wrap:break-word}
 .made-pair figcaption{margin:0;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--mute)}
 .made > p + p{margin-top:12px}
 
+/* «Что уже сделано»: четыре цифры в ряд, объяснение решений — раскрывающимся пунктом, чтобы не грузить */
+.nums{list-style:none;margin:28px 0 0;padding:24px 0 0;border-top:1px solid var(--ink);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.nums li{display:flex;flex-direction:column;gap:8px}
+.nums .big{margin:0}
+.nums li > span:last-child{color:var(--ink-2);font-size:.92rem;line-height:1.5;text-wrap:pretty}
+@media (max-width:760px){.nums{grid-template-columns:1fr 1fr;gap:24px 20px}}
+.why{margin-top:32px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.why summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;padding:12px 0;font-weight:500}
+.why summary::-webkit-details-marker{display:none}
+.why summary::after{content:"";flex:none;width:12px;height:12px;background:linear-gradient(var(--ink),var(--ink)) center/12px 1px no-repeat,linear-gradient(var(--ink),var(--ink)) center/1px 12px no-repeat;transition:transform .4s var(--ease-soft)}
+.why[open] summary::after{transform:rotate(45deg)}
+.why summary:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+.why > p{color:var(--ink-2);text-wrap:pretty;max-width:38em}
+.why ul{list-style:none;margin:16px 0 24px;padding:0;display:grid;gap:12px;max-width:38em}
+.why li{position:relative;padding-left:22px;color:var(--ink-2);line-height:1.6;text-wrap:pretty}
+.why li::before{content:"";position:absolute;left:0;top:.8em;width:10px;height:1px;background:currentColor;opacity:.55}
+
