@@ -1,7 +1,7 @@
 // Service worker сайта: повторный заход открывается мгновенно из кэша и работает без интернета.
 // Страница: сразу из кэша, если она там есть, а свежая версия тихо подтягивается в фоне на следующий раз.
 // Фото и шрифты: из кэша, иначе из сети с сохранением. Новая сборка меняет VERSION — старый кэш удаляется.
-const VERSION = 'timin-f5b57f7633';
+const VERSION = 'timin-58bf29ffe2';
 const CORE = ["./", "img/favicon.svg", "fonts/Jost-400.woff2", "fonts/Jost-500.woff2", "fonts/Playfair-400.woff2", "fonts/Playfair-italic-400.woff2"];
 const PAGE = new URL('./', self.registration.scope).href;
 

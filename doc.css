@@ -118,7 +118,7 @@ figcaption{margin-top:12px;font-size:.84rem;color:var(--mute);line-height:1.5}
 .screens figcaption{max-width:var(--col);margin:16px auto 0}
 @media (max-width:560px){
   .screens-link{padding-bottom:18%}
-  .screens .phone{width:36%;right:2%;border-width:4px;border-radius:18px}
+  .screens .phone{width:32%;right:2%;border-width:4px;border-radius:18px}   /* телефон 390×844: при 36% вставал почти во всю высоту скриншота */
   .screens .desk{border-left:0;border-right:0}
   .screens{width:100vw}
   .screens figcaption{padding:0 var(--gutter)}
